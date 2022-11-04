@@ -24,7 +24,7 @@ define do_call
 	echo "\`\`\`" >> $(4)
 endef
 
-run_1_1: build_all
+run_1_1:
 	$(eval OUTPUT=report/part1.md)
 	echo "# Разбираем наивный пример где вообще не думали про ошибки" > $(OUTPUT)
 	$(call do_call,1,1,resources/part_1/num.txt,$(OUTPUT),Когда все ок)
@@ -44,9 +44,9 @@ build_all: build_kotlin build_java build_golang build_rust build_c
 
 
 build_kotlin:
-	cd kotlin/errors_kotlin && \
+	cd kotlin && \
 	./gradlew jar && \
-	cp build/libs/errors_kotlin-1.0-SNAPSHOT.jar ../../bin/kotlin.jar
+	cp build/libs/errors_kotlin-1.0-SNAPSHOT.jar ../bin/kotlin.jar
 
 build_java:
 	cd java && \

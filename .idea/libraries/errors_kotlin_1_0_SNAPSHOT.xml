@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="errors_kotlin-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/kotlin/build/libs/errors_kotlin-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
