@@ -33,8 +33,8 @@ run_1_1: build_all
 	$(call do_call,1,1,,$(OUTPUT),Забыли передать параметр)
 	$(call do_call,1,1,resources/part_1/spaced_num.txt,$(OUTPUT),Число с пробелами вокруг)
 	$(call do_call,1,1,resources/part_1/no_num_suffix.txt,$(OUTPUT),Число после которого сразу буквы)
+	$(call do_call,1,1,resources/part_1/not_num.txt,$(OUTPUT),Вообще не число)
 	$(call do_call,1,1,resources/part_1/big_number.txt,$(OUTPUT),Переполнение разрядности Int)
-	$(call do_call,1,1,resources/part_1/no_zeroes.txt,$(OUTPUT),Весь буфер полон и нет 0)
 	$(call do_call,1,1,resources/part_1/empty_num.txt,$(OUTPUT),Пустой файл)
 
 

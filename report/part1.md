@@ -71,7 +71,7 @@ panic: runtime error: index out of range [1] with length 1
 
 goroutine 1 [running]:
 main.main()
-	/media/comdiv/data/code/error_handling/golang/cmd/p1/e1/go_1_1.go:11 +0x190
+	/media/comdiv/data/code/error_handling/golang/cmd/p1/e1/go_1_1.go:10 +0x165
 ```
 ### Rust
 ```
@@ -127,6 +127,28 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "1
 	at java.base/java.lang.Integer.parseInt(Integer.java:770)
 	at P1_e1Kt.main(p1_e1.kt:13)
 ```
+## Вообще не число
+### C
+```
+0 * 0 = 0
+```
+### Golang
+```
+0 * 0 = 0
+```
+### Rust
+```
+thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ParseIntError { kind: InvalidDigit }', src/p1/e1/main.rs:13:41
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+### Kotlin
+```
+Exception in thread "main" java.lang.NumberFormatException: For input string: "abc"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at P1_e1Kt.main(p1_e1.kt:13)
+```
 ## Переполнение разрядности Int
 ### C
 ```
@@ -144,28 +166,6 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ### Kotlin
 ```
 999999999 * 999999999 = 808348673
-```
-## Весь буфер полон и нет 0
-### C
-```
-1000000000 * 1000000000 = -1486618624
-```
-### Golang
-```
-panic: runtime error: slice bounds out of range [:-1]
-
-goroutine 1 [running]:
-main.main()
-	/media/comdiv/data/code/error_handling/golang/cmd/p1/e1/go_1_1.go:15 +0x186
-```
-### Rust
-```
-thread 'main' panicked at 'attempt to multiply with overflow', src/p1/e1/main.rs:14:46
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-```
-### Kotlin
-```
-1000000000 * 1000000000 = -1486618624
 ```
 ## Пустой файл
 ### C
