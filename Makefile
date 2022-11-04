@@ -28,12 +28,14 @@ run_1_1: build_all
 	$(eval OUTPUT=report/part1.md)
 	echo "# Разбираем наивный пример где вообще не думали про ошибки" > $(OUTPUT)
 	$(call do_call,1,1,resources/part_1/num.txt,$(OUTPUT),Когда все ок)
-	$(call do_call,1,1,resources/part_1/spaced_num.txt,$(OUTPUT),Число с пробелами вокруг)
-	$(call do_call,1,1,resources/part_1/no_num_suffix.txt,$(OUTPUT),Число после которого сразу буквы)
-	$(call do_call,1,1,resources/part_1/empty_num.txt,$(OUTPUT),Пустой файл)
 	$(call do_call,1,1,resources/part_1/__no_such_file__.txt,$(OUTPUT),Не существующий файл)
 	$(call do_call,1,1,resources/part_1,$(OUTPUT),Дирктория)
 	$(call do_call,1,1,,$(OUTPUT),Забыли передать параметр)
+	$(call do_call,1,1,resources/part_1/spaced_num.txt,$(OUTPUT),Число с пробелами вокруг)
+	$(call do_call,1,1,resources/part_1/no_num_suffix.txt,$(OUTPUT),Число после которого сразу буквы)
+	$(call do_call,1,1,resources/part_1/big_number.txt,$(OUTPUT),Переполнение разрядности Int)
+	$(call do_call,1,1,resources/part_1/no_zeroes.txt,$(OUTPUT),Весь буфер полон и нет 0)
+	$(call do_call,1,1,resources/part_1/empty_num.txt,$(OUTPUT),Пустой файл)
 
 
 

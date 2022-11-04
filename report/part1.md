@@ -16,71 +16,6 @@
 ```
 123 * 123 = 15129
 ```
-## Число с пробелами вокруг
-### C
-```
-123 * 123 = 15129
-```
-### Golang
-```
-0 * 0 = 0
-```
-### Rust
-```
-thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ParseIntError { kind: InvalidDigit }', src/p1/e1/main.rs:13:41
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-```
-### Kotlin
-```
-Exception in thread "main" java.lang.NumberFormatException: For input string: "  123"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.base/java.lang.Integer.parseInt(Integer.java:638)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-	at P1_e1Kt.main(p1_e1.kt:13)
-```
-## Число после которого сразу буквы
-### C
-```
-123 * 123 = 15129
-```
-### Golang
-```
-0 * 0 = 0
-```
-### Rust
-```
-thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ParseIntError { kind: InvalidDigit }', src/p1/e1/main.rs:13:41
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-```
-### Kotlin
-```
-Exception in thread "main" java.lang.NumberFormatException: For input string: "123ABC"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.base/java.lang.Integer.parseInt(Integer.java:652)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-	at P1_e1Kt.main(p1_e1.kt:13)
-```
-## Пустой файл
-### C
-```
-0 * 0 = 0
-```
-### Golang
-```
-0 * 0 = 0
-```
-### Rust
-```
-thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ParseIntError { kind: Empty }', src/p1/e1/main.rs:13:41
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-```
-### Kotlin
-```
-Exception in thread "main" java.lang.StringIndexOutOfBoundsException: offset 0, count -1, length 10
-	at java.base/java.lang.String.checkBoundsOffCount(String.java:3304)
-	at java.base/java.lang.String.<init>(String.java:505)
-	at P1_e1Kt.main(p1_e1.kt:12)
-```
 ## Не существующий файл
 ### C
 ```
@@ -147,4 +82,109 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ```
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
 	at P1_e1Kt.main(p1_e1.kt:8)
+```
+## Число с пробелами вокруг
+### C
+```
+123 * 123 = 15129
+```
+### Golang
+```
+0 * 0 = 0
+```
+### Rust
+```
+thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ParseIntError { kind: InvalidDigit }', src/p1/e1/main.rs:13:41
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+### Kotlin
+```
+Exception in thread "main" java.lang.NumberFormatException: For input string: "  123"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:638)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at P1_e1Kt.main(p1_e1.kt:13)
+```
+## Число после которого сразу буквы
+### C
+```
+123 * 123 = 15129
+```
+### Golang
+```
+0 * 0 = 0
+```
+### Rust
+```
+thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ParseIntError { kind: InvalidDigit }', src/p1/e1/main.rs:13:41
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+### Kotlin
+```
+Exception in thread "main" java.lang.NumberFormatException: For input string: "123ABC"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at P1_e1Kt.main(p1_e1.kt:13)
+```
+## Переполнение разрядности Int
+### C
+```
+999999999 * 999999999 = 808348673
+```
+### Golang
+```
+999999999 * 999999999 = 999999998000000001
+```
+### Rust
+```
+thread 'main' panicked at 'attempt to multiply with overflow', src/p1/e1/main.rs:14:46
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+### Kotlin
+```
+999999999 * 999999999 = 808348673
+```
+## Весь буфер полон и нет 0
+### C
+```
+1000000000 * 1000000000 = -1486618624
+```
+### Golang
+```
+panic: runtime error: slice bounds out of range [:-1]
+
+goroutine 1 [running]:
+main.main()
+	/media/comdiv/data/code/error_handling/golang/cmd/p1/e1/go_1_1.go:15 +0x186
+```
+### Rust
+```
+thread 'main' panicked at 'attempt to multiply with overflow', src/p1/e1/main.rs:14:46
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+### Kotlin
+```
+1000000000 * 1000000000 = -1486618624
+```
+## Пустой файл
+### C
+```
+0 * 0 = 0
+```
+### Golang
+```
+0 * 0 = 0
+```
+### Rust
+```
+thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ParseIntError { kind: Empty }', src/p1/e1/main.rs:13:41
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+### Kotlin
+```
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: offset 0, count -1, length 10
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3304)
+	at java.base/java.lang.String.<init>(String.java:505)
+	at P1_e1Kt.main(p1_e1.kt:12)
 ```
