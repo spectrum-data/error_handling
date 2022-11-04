@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="P1_EX1_Golang" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="error_handling" />
+    <working_directory value="$PROJECT_DIR$" />
+    <parameters value="resources/part_1/num.txt" />
+    <kind value="FILE" />
+    <directory value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$/golang/cmd/part_1/naive/ex1_naive.go" />
+    <method v="2" />
+  </configuration>
+</component>
