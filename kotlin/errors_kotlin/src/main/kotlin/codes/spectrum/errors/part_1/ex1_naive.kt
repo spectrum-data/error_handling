@@ -1,7 +1,6 @@
 package codes.spectrum.errors.part_1
 
 import java.io.File
-import java.nio.CharBuffer
 import kotlin.system.exitProcess
 
 /**
@@ -10,9 +9,9 @@ import kotlin.system.exitProcess
 fun main(argv: Array<String>) {
     val filename = argv[0];
     val file = File(filename)
-    val buffer = CharBuffer.allocate(10)
-    file.reader().read(buffer)
-    val content = buffer.flip().toString()
+    val buffer = ByteArray(10)
+    val size = file.inputStream().read(buffer)
+    val content = String(buffer,0,size)
     val number = content.toInt()
     println("$number * $number = ${number * number}")
     exitProcess(0)

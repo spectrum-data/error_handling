@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/java" />
     <file type="web" url="file://$PROJECT_DIR$/kotlin/errors_kotlin" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="azul-18" project-jdk-type="JavaSDK" />
