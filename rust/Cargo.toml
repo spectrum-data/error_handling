@@ -8,5 +8,5 @@ edition = "2021"
 [dependencies]
 
 [[bin]]
-name = "p1_ex1_naive"
-path = "src/part_1/ex1_naive/main.rs"
+name = "rust_1_1"
+path = "src/p1/e1/main.rs"

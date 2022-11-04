@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="P1_EX1_Java" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="part_1.ex_1.ex1_naive" />
+    <option name="MAIN_CLASS_NAME" value="p1_e1" />
     <module name="java.main" />
     <option name="PROGRAM_PARAMETERS" value="resources/part_1/num.txt" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="part_1.ex_1.*" />
+        <option name="PATTERN" value=".*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

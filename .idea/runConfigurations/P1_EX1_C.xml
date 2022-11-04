@@ -2,10 +2,10 @@
   <configuration default="false" name="P1_EX1_C" type="ShConfigurationType">
     <option name="SCRIPT_TEXT" value="" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-    <option name="SCRIPT_PATH" value="$PROJECT_DIR$/c/part_1/ex1_naive.sh" />
+    <option name="SCRIPT_PATH" value="$PROJECT_DIR$/c/p1/e1.sh" />
     <option name="SCRIPT_OPTIONS" value="resources/part_1/num.txt" />
     <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/c/part_1" />
+    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/c/p1" />
     <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
     <option name="INTERPRETER_PATH" value="/bin/bash" />
     <option name="INTERPRETER_OPTIONS" value="" />

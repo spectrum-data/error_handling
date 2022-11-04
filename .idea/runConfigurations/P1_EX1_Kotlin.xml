@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="P1_EX1_Kotlin" type="JetRunConfigurationType">
-    <option name="MAIN_CLASS_NAME" value="codes.spectrum.errors.part_1.Ex1_naiveKt" />
+    <option name="MAIN_CLASS_NAME" value="P1_e1Kt" />
     <module name="errors_kotlin.main" />
     <option name="PROGRAM_PARAMETERS" value="resources/part_1/num.txt" />
     <shortenClasspath name="NONE" />

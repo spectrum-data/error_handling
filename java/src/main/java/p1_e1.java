@@ -1,10 +1,8 @@
-package part_1.ex_1;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public final class ex1_naive {
+public final class p1_e1 {
     public static void main(String[] argv) throws IOException {
         String filename = argv[0];
         File file = new File(filename);

@@ -1,5 +1,3 @@
-package codes.spectrum.errors.part_1
-
 import java.io.File
 import kotlin.system.exitProcess
 

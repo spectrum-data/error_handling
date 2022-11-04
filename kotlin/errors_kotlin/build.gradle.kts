@@ -22,3 +22,9 @@ tasks.test {
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
+
+tasks.withType<Jar>() {
+    exclude("**/module-info.class")
+    val files = configurations.compileClasspath.get().map { if(it.isDirectory) it else zipTree(it) }
+    from(files)
+}
