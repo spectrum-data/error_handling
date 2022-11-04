@@ -19,7 +19,7 @@
 ## Число с пробелами вокруг
 ### C
 ```
-1230 * 1230 = 1512900
+123 * 123 = 15129
 ```
 ### Golang
 ```
@@ -88,11 +88,7 @@ Segmentation fault (core dumped)
 ```
 ### Golang
 ```
-panic: open resources/part_1/__no_such_file__.txt: no such file or directory
-
-goroutine 1 [running]:
-main.main()
-	/media/comdiv/data/code/error_handling/golang/cmd/p1/e1/go_1_1.go:15 +0x1a5
+0 * 0 = 0
 ```
 ### Rust
 ```
@@ -140,7 +136,7 @@ panic: runtime error: index out of range [1] with length 1
 
 goroutine 1 [running]:
 main.main()
-	/media/comdiv/data/code/error_handling/golang/cmd/p1/e1/go_1_1.go:11 +0x1af
+	/media/comdiv/data/code/error_handling/golang/cmd/p1/e1/go_1_1.go:11 +0x190
 ```
 ### Rust
 ```
