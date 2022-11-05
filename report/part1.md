@@ -35,7 +35,7 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 Exception in thread "main" java.io.FileNotFoundException: resources/part_1/__no_such_file__.txt (No such file or directory)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
 	at P1_e1Kt.main(p1_e1.kt:11)
 ```
 ## Дирктория
@@ -57,7 +57,7 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 Exception in thread "main" java.io.FileNotFoundException: resources/part_1 (Is a directory)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
 	at P1_e1Kt.main(p1_e1.kt:11)
 ```
 ## Забыли передать параметр
@@ -100,9 +100,9 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ### Kotlin
 ```
 Exception in thread "main" java.lang.NumberFormatException: For input string: "  123"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.base/java.lang.Integer.parseInt(Integer.java:638)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:651)
+	at java.base/java.lang.Integer.parseInt(Integer.java:781)
 	at P1_e1Kt.main(p1_e1.kt:13)
 ```
 ## Число после которого сразу буквы
@@ -122,9 +122,9 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ### Kotlin
 ```
 Exception in thread "main" java.lang.NumberFormatException: For input string: "123ABC"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.base/java.lang.Integer.parseInt(Integer.java:652)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:665)
+	at java.base/java.lang.Integer.parseInt(Integer.java:781)
 	at P1_e1Kt.main(p1_e1.kt:13)
 ```
 ## Вообще не число
@@ -144,9 +144,9 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ### Kotlin
 ```
 Exception in thread "main" java.lang.NumberFormatException: For input string: "abc"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.base/java.lang.Integer.parseInt(Integer.java:652)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:665)
+	at java.base/java.lang.Integer.parseInt(Integer.java:781)
 	at P1_e1Kt.main(p1_e1.kt:13)
 ```
 ## Переполнение разрядности Int
@@ -183,8 +183,15 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ```
 ### Kotlin
 ```
-Exception in thread "main" java.lang.StringIndexOutOfBoundsException: offset 0, count -1, length 10
-	at java.base/java.lang.String.checkBoundsOffCount(String.java:3304)
-	at java.base/java.lang.String.<init>(String.java:505)
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: Range [0, 0 + -1) out of bounds for length 10
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromIndexSize(Preconditions.java:118)
+	at java.base/jdk.internal.util.Preconditions.checkFromIndexSize(Preconditions.java:397)
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:4590)
+	at java.base/java.lang.String.<init>(String.java:523)
 	at P1_e1Kt.main(p1_e1.kt:12)
 ```
