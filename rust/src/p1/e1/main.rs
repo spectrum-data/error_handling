@@ -9,7 +9,9 @@ fn main() {
     let mut f = File::open(filename).unwrap();
     let mut buffer = [0u8; 10];
     let size = f.read(&mut buffer).unwrap();
-    let content = String::from_utf8_lossy(&buffer[0..size]);
+    let content = String::from_utf8_lossy(
+        &buffer[0..size]
+    );
     let number = content.parse::<i32>().unwrap();
     println!("{} * {} = {}", number, number, number * number);
     exit(0);
