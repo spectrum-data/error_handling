@@ -1,7 +1,5 @@
 package p21tcq
 
-import java.io.Closeable
-
 
 private fun userfun2(): String{
     ErrorClose.use {
